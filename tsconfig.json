@@ -1,0 +1,36 @@
+{
+  "include": ["src/**/*.ts", "test/**/*.ts"],
+  "exclude": ["node_modules/*", "jest.config.ts"],
+  "compilerOptions": {
+    "allowJs": true,
+    "declaration": true,
+    "downlevelIteration": false,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": [
+      "DOM",
+      "ES2015",
+      "ES2015.Reflect",
+      "ES2016.Array.Include",
+      "ES2017.SharedMemory",
+      "ES2018",
+      "ES2021"
+    ],
+    "importsNotUsedAsValues": "remove",
+    // "esModuleInterop": true, /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */
+    "module": "es2020",
+    "moduleResolution": "node",
+    "noEmit": false,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "outDir": "./build",
+    "removeComments": true,
+    "rootDir": "./",
+    "sourceMap": true,
+    "sourceRoot": "src",
+    "strict": true,
+    "target": "ES2021"
+  }
+}

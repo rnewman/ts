@@ -1,0 +1,40 @@
+{
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.3.0",
+    "@typescript-eslint/parser": "^5.3.0",
+    "esbuild": "^0.13.12",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jest": "^25.2.3",
+    "jest": "^27.3.1",
+    "ts-jest": "^27.0.7",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  },
+  "name": "ts",
+  "version": "1.0.0",
+  "description": "Example TypeScript project scaffolding.",
+  "main": "src/main.ts",
+  "type": "module",
+  "directories": {
+    "test": "test"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "transform": {
+      "^.+\\.ts?$": "ts-jest"
+    },
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "lint": "eslint --ext .ts .",
+    "build": "esbuild --bundle --platform=node src/main.ts --outdir=dist --sourcemap",
+    "watch": "npm run build -- --watch",
+    "run": "npm run build && node dist/main.js",
+    "test": "jest"
+  },
+  "author": "Richard Newman <rnewman@twinql.com>",
+  "license": "MIT-0"
+}
